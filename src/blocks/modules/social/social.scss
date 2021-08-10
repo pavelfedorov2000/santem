@@ -1,0 +1,25 @@
+.social {
+    display: flex;
+    // .social__item
+
+    &__item {
+        @include bg-icon(60px, linear-gradient(-45deg, #feffff 0%, #d5dce1 100%), $light-shadow);
+    }
+
+    &__item + &__item {
+        margin-left: 20px;
+    }
+
+    // .social__link
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        @extend %flex-center;
+    }
+
+    // .social__img
+
+    &__img {
+    }
+}

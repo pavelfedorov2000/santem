@@ -1,0 +1,124 @@
+.promotion-card {
+    position: relative;
+    // .promotion-card__date
+
+    &__date {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        padding: 10px 40px 10px 10px;
+    }
+
+    // .promotion-card__title
+
+    &__title {
+        font-size: 26px;
+        line-height: 36px;
+        color: $dark;
+        margin: 30px 0 20px;
+    }
+
+    // .promotion-card__text
+
+    &__text {
+        @extend %gray-text;
+    }
+
+    &.finished {
+        .date {
+            &__img {
+                background: linear-gradient(-45deg, #feffff 0%, #d5dce1 100%);
+                &:before {
+                    background-image: url(../img/icons/calendar-disabled.png);
+                }
+            }
+        }
+    }
+}
+
+.promotion-page {
+    &__cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px 20px;
+    }
+}
+
+.promotion-section {
+    // .promotion-section__slider
+
+    &__slider {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    &__slider-btn {
+        position: absolute;
+        top: 0;
+        &--next {
+            right: 0;
+        }
+        &--prev {
+            right: 80px;
+        }
+    }
+}
+.promotion-item {
+    display: flex;
+    // .promotion-item__img
+
+    &__img {
+    }
+
+    // .promotion-item__content
+
+    &__content {
+        margin-left: 20px;
+    }
+
+    // .promotion-item__date
+
+    &__date {
+        display: inline-flex;
+        align-items: center;
+        background: linear-gradient(to right, #edf4fa 0%, #ffffff 100%);
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 20px;
+    }
+
+    // .promotion-item__date-img
+
+    &__date-img {
+        @include bg-icon(50px, $green, $light-shadow);
+        @extend %flex-center;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+
+    // .promotion-item__title
+
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 20px;
+        span {
+            color: $red;
+        }
+    }
+
+    // .promotion-item__text
+
+    &__text {
+        @extend %text-16;
+        color: $dark;
+        margin-bottom: 20px;
+    }
+
+    small {
+        font-size: 14px;
+        color: $gray;
+    }
+}

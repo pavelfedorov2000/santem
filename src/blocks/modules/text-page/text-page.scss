@@ -1,0 +1,62 @@
+.text-page {
+    &__tag {
+        border-color: #ccdae6;
+        font-size: 14px;
+        margin-left: 105px;
+        margin-top: 20px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    &__img {
+        position: relative;
+    }
+
+    &__img-date {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        padding: 10px 40px 10px 10px;
+    }
+
+    &__paragraph {
+        @extend %text-18;
+        color: $dark;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+
+    &__section {
+        margin-top: 40px;
+        p {
+            @extend %text-16;
+            color: $dark;
+            margin-top: 30px;
+        }
+    }
+
+    &__section-title {
+        margin-bottom: 30px;
+    }
+    // .text-page__form
+
+    &__form {
+        margin-top: 80px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+}
+
+.attention-box {
+    @extend %blue-radius-bg;
+    padding: 40px;
+    p {
+        max-width: 1030px;
+        @extend %text-18;
+        font-weight: 600;
+        color: $blue;
+        margin-top: 0;
+    }
+}

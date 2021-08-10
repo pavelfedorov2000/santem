@@ -1,0 +1,26 @@
+.info-item {
+    display: flex;
+    align-items: flex-start;
+
+    &__title {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 11px;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: $gray;
+    }
+
+    &__link {
+        text-decoration: underline;
+    }
+
+    &__img {
+        @extend %flex-center;
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,58 @@
+.not-found-page {
+    padding: 100px 0 90px;
+    // .404-page__wrapper
+
+    &__wrapper {
+        max-width: 1410px;
+        display: flex;
+    }
+
+    // .404-page__content
+
+    &__content {
+        flex: 1 1 auto;
+
+        p {
+            @extend %gray-text;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        margin: 40px 0;
+    }
+
+    // .404-page__link
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        height: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        box-shadow: -5px -4px 12px #ffffff, 5px 4px 12px $light-shadow;
+        border-radius: $radius;
+        background: linear-gradient(to right, $light-blue 0%, #ffffff 100%);
+        //padding: 19.5px 30px;
+        @extend %text-14;
+        font-weight: 700;
+        letter-spacing: 0.35px;
+        text-transform: uppercase;
+        color: $blue;
+        transition: 0.3s box-shadow;
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &__link + &__link {
+        margin-left: 20px;
+    }
+
+    // .404-page__form
+
+    &__form {
+        flex: 0 0 440px;
+        padding: 40px 40px 40px 45px;
+    }
+}

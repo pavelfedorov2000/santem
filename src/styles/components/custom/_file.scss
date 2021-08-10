@@ -1,0 +1,58 @@
+// =============== INPUT-FILE ================ //
+.jq-file {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    cursor: pointer;
+    border-radius: $radius;
+    padding: 5px 5px 5px 75px;
+    background: linear-gradient(to right, $light-blue 0%, #ffffff 100%);
+    @include shadow($light-shadow);
+    @extend %vertical-align;
+    &:before {
+        content: '';
+        position: absolute;
+        @extend %pos-center-y;
+        left: 5px;
+        @include bg-icon(50px, linear-gradient(-45deg, #feffff 0%, #d5dce1 100%), $light-shadow);
+        background-image: url(../img/icons/paper-clip.png);
+        background-size: 24px 22px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__name {
+        width: fit-content;
+        background-color: transparent;
+        height: auto;
+        border: none;
+        box-shadow: none;
+        color: $blue;
+        font-weight: 600;
+        font: 16px/26px 'Montserrat', sans-serif;
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    &__browse {
+        display: none;
+    }
+
+    &:focus {
+        outline: none;
+        .jq-file {
+            &__name {
+                border: none;
+                //border-bottom: 2px solid $accent;
+            }
+        }
+    }
+
+    &.focused,
+    &.changed {
+        .jq-file__name {
+            border: none;
+            //border-bottom: 2px solid $accent;
+        }
+    }
+}

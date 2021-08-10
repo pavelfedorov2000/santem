@@ -1,0 +1,234 @@
+.price-list {
+    // .price-list__item
+
+    &__item-row {
+        @extend %flex-row-center;
+    }
+
+    &__item + &__item {
+        margin-top: 20px;
+    }
+
+    // .price-list__item-title
+
+    &__item-title {
+        font-size: 18px;
+    }
+
+    &__item-title,
+    &__item-price {
+        font-weight: 600;
+        color: $dark;
+    }
+
+    // .price-list__item-price
+
+    &__item-price {
+        font-size: 24px;
+        margin-left: auto;
+        margin-right: 70px;
+    }
+
+    // .price-list__add-btn
+
+    &__add-btn {
+        @include bg-icon(50px, $blue, rgba(33, 99, 171, 0.6));
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-xy;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/icons/plus.png);
+        }
+        &--active {
+            background-color: $light-blue;
+            box-shadow: none;
+            &:before {
+                width: 20px;
+                height: 16px;
+                background-image: url(../img/icons/check.png);
+            }
+        }
+    }
+
+    // .price-list__btn
+
+    &__btn {
+        font-size: 15px;
+        padding: 16.5px 31px;
+        margin-left: 20px;
+    }
+
+    &__item-descr {
+        @extend %gray-text;
+        margin-top: 20px;
+    }
+
+    // .price-list__link
+
+    &__link {
+        display: inline-block;
+        min-width: 270px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
+
+.prices-accordion {
+    // .prices-accordion__item-summary
+
+    &__item-summary {
+        font-size: 24px;
+        font-weight: 600;
+        color: $dark;
+        position: relative;
+        cursor: pointer;
+        transition: 0.3s color;
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+        }
+        &:before {
+            @include icon(60px);
+            background-color: $light-blue;
+            right: 0;
+        }
+        &:after {
+            right: 20px;
+            width: 20px;
+            height: 16px;
+            background-image: url(../img/icons/select-drop.png);
+            transition: 0.3s transform;
+        }
+    }
+
+    // .prices-accordion__item-details
+
+    &__item-details {
+        display: none;
+        padding: 45px 0 10px 40px;
+    }
+
+    &__item {
+        padding-bottom: 30px;
+        border-bottom: 2px solid $light-blue;
+        &--active {
+            .prices-accordion {
+                &__item-summary {
+                    color: $red;
+                    &:after {
+                        transform: rotate(180deg) translateY(7px);
+                    }
+                }
+            }
+        }
+    }
+
+    &__item + &__item {
+        margin-top: 30px;
+    }
+}
+
+.prices-page {
+    padding-bottom: 160px;
+    &__wrapper {
+        align-items: flex-start;
+    }
+    // .prices-page__tabs
+
+    &__tabs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        padding: 20px;
+        @extend %blue-radius-bg;
+    }
+
+    // .prices-page__tab
+
+    &__tab {
+        background: linear-gradient(to right, $light-blue 0%, #ffffff 100%);
+        @include shadow($light-shadow);
+        border-radius: 15px;
+        padding: 10px;
+        @extend %vertical-align;
+        font-size: 24px;
+        font-weight: 600;
+        color: $blue;
+        &.tab--active {
+            color: $red;
+            .prices-page {
+                &__tab-img {
+                    background: $red;
+                }
+            }
+        }
+    }
+
+    // .prices-page__tab-img
+
+    &__tab-img {
+        @include bg-icon(50px, linear-gradient(-45deg, #feffff 0%, #d5dce1 100%), $light-shadow);
+        @extend %flex-center;
+        margin-right: 40px;
+    }
+
+    &__search {
+        margin: 20px 0 40px;
+    }
+}
+
+.aside-order {
+    @include shadow($light-shadow);
+    border-radius: $radius;
+    background-color: #fff;
+    padding: 40px;
+    // .aside-order__items
+
+    &__items {
+        position: relative;
+        display: flex;
+        padding-left: 50px;
+        margin: 0;
+        margin-bottom: 20px;
+        &:before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            left: 0px;
+            width: 31px;
+            height: 30px;
+            background-image: url(../img/icons/wallet.png);
+        }
+    }
+
+    // .aside-order__item
+
+    &__item {
+        font-size: 18px;
+        line-height: 26px;
+        dt {
+            color: $gray;
+        }
+        dd {
+            font-weight: 700;
+            color: $dark;
+            margin-left: 0;
+        }
+    }
+
+    &__item + &__item {
+        margin-left: 60px;
+    }
+
+    // .aside-order__btn
+
+    &__btn {
+        width: 100%;
+        padding: 20px;
+    }
+}

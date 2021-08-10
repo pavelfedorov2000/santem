@@ -1,0 +1,103 @@
+.page-nav {
+    padding: 40px;
+    @extend %blue-bg;
+    // .page-nav__title
+
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        color: $gray;
+        margin-bottom: 20px;
+    }
+
+    // .page-nav__item
+
+    &__item {
+        border-top: 2px solid #ccdae6;
+        padding: 20px 0;
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &--active {
+            .page-nav {
+                &__sublist {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    // .page-nav__link
+
+    &__link {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        color: #202125;
+        span {
+            color: $gray;
+        }
+        &--active {
+            position: relative;
+            padding-left: 23px;
+            color: $red;
+            &:before {
+                content: '';
+                position: absolute;
+                @extend %pos-center-y;
+                left: 0px;
+                width: 12px;
+                height: 16px;
+                background-image: url('../img/icons/arrows/red-arrow.png');
+            }
+            &:after {
+                transform: rotate(45deg) translateY(-50%);
+                right: 2px;
+            }
+        }
+        &--drop {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                @extend %pos-center-y;
+                right: 0;
+                width: 17px;
+                height: 17px;
+                background-image: url(../img/icons/gray-plus.png);
+            }
+        }
+    }
+    // .page-nav__sublist
+
+    &__sublist {
+        @extend %blue-radius-bg;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    // .page-nav__sublist-item
+
+    &__sublist-item {
+        position: relative;
+        padding-left: 30px;
+        @extend %gray-text;
+        &:before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            left: 0px;
+            width: 12px;
+            height: 16px;
+            background-image: url('../img/icons/arrows/gray-arrow.png');
+        }
+    }
+
+    // .page-nav__sublist-link
+
+    &__sublist-link {
+    }
+}

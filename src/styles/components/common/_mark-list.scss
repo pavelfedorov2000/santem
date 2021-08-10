@@ -1,0 +1,30 @@
+.mark-list {
+    &__item {
+        position: relative;
+        @extend %text-16;
+        color: $dark;
+        padding-left: 30px;
+
+        @media(max-width: 575px) {
+            font-size: 14px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 1px;
+            left: 0px;
+            width: 12px;
+            height: 16px;
+            background-image: url('../img/icons/arrows/red-arrow.png');
+        }
+    }
+
+    li+li {
+        margin-top: 20px;
+
+        @media(max-width: 575px) {
+            margin-top: 15px;
+        }
+    }
+}

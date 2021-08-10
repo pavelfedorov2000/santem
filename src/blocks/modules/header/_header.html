@@ -1,0 +1,120 @@
+<header class="header">
+    <div class="container">
+        <div class="header__top header__inner">
+            <div class="logo header__logo">
+                <a class="logo__link" href="home.html">
+                    <img class="logo__img" src="img/logo/header-logo.png" alt="Логотип Сантем">
+                </a>
+            </div>
+            <div class="header__contact contact-header" data-da=".header__bottom, 991, last">
+                <div class="info-item contact-header__item">
+                    <div class="info-item__img contact-header__item-img contact-header__item-img--yellow">
+                        <img src="img/icons/header/location.png" alt="Адрес">
+                    </div>
+                    <div class="contact-header__item-content">
+                        <div class="info-item__title contact-header__item-title">
+                            г. Красноярск
+                        </div>
+                        <select class="contact-header__select">
+                            <option value="address-1">
+                                ул. Ярыгинская набережная, д. 29
+                            </option>
+                            <option value="address-2">
+                                ул. Чернышевского, 120
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="info-item contact-header__item">
+                    <div class="info-item__img contact-header__item-img contact-header__item-img--orange">
+                        <img src="img/icons/header/phone.png" alt="Телефон">
+                    </div>
+                    <div class="contact-header__item-content">
+                        <a class="info-item__title contact-header__item-title" href="tel:+73912803303">
+                            +7 (391) 280-33-03
+                        </a>
+                        <a class="info-item__text info-item__link contatc-header__item-link" href="#">
+                            Режим работы
+                        </a>
+                    </div>
+                </div>
+                <div class="header__buttons">
+                    <a class="header__btn-item header__link-btn header__link-btn--red" href="#">
+                        <span><img src="img/icons/user.png" alt="Личный кабинет"></span>
+                        Личный
+                        кабинет
+                    </a>
+                    <a class="header__btn-item header__link-btn header__link-btn--blue" href="#">
+                        <span><img src="img/icons/credit-card.png" alt="Онлайн-оплата"></span>
+                        Онлайн
+                        оплата
+                    </a>
+                    <button class="btn header__btn-item header__btn btn--red">
+                        Записаться на прием
+                    </button>
+                </div>
+            </div>
+            @@include('../burger/burger-btn/_burger-btn.html')
+        </div>
+        <div class="header__bottom header__inner">
+            <nav class="menu header__menu">
+                <ul class="menu__list header__menu-list">
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="#about">
+                            О клинике
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="doctors.html">
+                            Врачи
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="services.html">
+                            Услуги
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="#">
+                            Анализы
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="#">
+                            Диагностика
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="omc.html">
+                            ОМС
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="promotion.html">
+                            Акции
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="prices.html">
+                            Цены
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="articles.html">
+                            Статьи
+                        </a>
+                    </li>
+                    <li class="menu__item header__menu-item">
+                        <a class="menu__link header__menu-link" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <form action="#" class="header__search">
+                <input class="header__search-input" placeholder="Поиск..." type="search">
+                <!-- <button class="header__search-btn" role="search" type="submit"></button> -->
+            </form>
+        </div>
+    </div>
+</header>

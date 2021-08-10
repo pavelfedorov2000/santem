@@ -1,0 +1,9 @@
+.share {
+    @extend %vertical-align;
+    // .share__title
+
+    &__title {
+        font-size: 18px;
+        margin-right: 20px;
+    }
+}

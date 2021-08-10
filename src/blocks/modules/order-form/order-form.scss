@@ -1,0 +1,46 @@
+.order-form {
+    // .order-form__title
+
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
+        color: $dark;
+    }
+
+    // .order-form__subtitle
+
+    &__subtitle {
+        @extend %text-18;
+        font-weight: 600;
+        color: $gray;
+        margin: 20px 0;
+    }
+
+    // .order-form__phone
+
+    &__phone {
+        display: block;
+        font-size: 26px;
+        line-height: 36 / 26 * 100%;
+        color: $blue;
+    }
+
+    // .order-form__body
+
+    &__body {
+    }
+
+    // .order-form__input
+
+    &__input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    // .order-form__btn
+
+    &__btn {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

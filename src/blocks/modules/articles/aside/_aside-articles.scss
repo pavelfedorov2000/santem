@@ -1,0 +1,15 @@
+.aside-articles {
+    // .aside-articles__item
+
+    &__item + &__item {
+        margin-top: 40px;
+    }
+
+    // .aside-articles__item-img
+
+    &__item-img {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

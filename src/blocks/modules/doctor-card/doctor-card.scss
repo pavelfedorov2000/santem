@@ -1,0 +1,119 @@
+.doctor-card {
+    position: relative;
+    box-shadow: -5px -4px 12px #ffffff, 5px 4px 12px #c9cfd5;
+    border-radius: $radius;
+    background-color: #ffffff;
+    transition: 0.3s all;
+    &:hover {
+        background-color: #edf4fa;
+        .doctor-card {
+            &__name {
+                color: $blue;
+            }
+        }
+    }
+    // .doctor-card__like-btn
+
+    &__like-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #fff;
+        border-radius: $radius;
+        padding: 10px;
+        @extend %vertical-align;
+        span {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: $dark;
+            margin-left: 10px;
+        }
+    }
+
+    &__like-icon {
+        position: relative;
+        width: 20px;
+        height: 17px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/icons/hearts/heart.png');
+        }
+    }
+
+    &--favorite {
+        .doctor-card {
+            &__like-icon {
+                background-image: url('../img/icons/hearts/active-heart.png');
+            }
+        }
+    }
+
+    // .doctor-card__img
+
+    &__img {
+        width: 100%;
+    }
+
+    // .doctor-card__content
+
+    &__content {
+        padding: 25px 20px 20px;
+        @media (max-width: 1600px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @media (max-width: 767px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+    }
+
+    // .doctor-card__name
+
+    &__name {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #202125;
+        margin-bottom: 15px;
+    }
+
+    // .doctor-card__info
+
+    &__info {
+        font-size: 14px;
+        line-height: 24px;
+        color: $gray;
+        span {
+            font-weight: 500;
+            color: #202125;
+        }
+    }
+
+    // .doctor-card__documents
+
+    &__documents {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        color: $blue;
+        margin-top: 15px;
+    }
+
+    // .doctor-card__btn
+
+    &__btn {
+        width: 100%;
+        padding: 21.5px 10px;
+        font-size: 15px;
+        letter-spacing: 0.38px;
+        margin-top: 20px;
+    }
+}

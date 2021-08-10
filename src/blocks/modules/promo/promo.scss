@@ -1,0 +1,173 @@
+.promo {
+    padding-top: 80px;
+    position: relative;
+
+    @media(max-width: 991px) {
+        padding-top: 50px;
+    }
+
+    @media(max-width: 575px) {
+        padding-top: 30px;
+    }
+
+    &:before {
+        @include blue-bg(1430px / 1920px * 100%);
+        top: 0;
+        left: 0;
+        bottom: 50px;
+        border-radius: 0 0 15px;
+    }
+
+    // .promo__slider
+
+    &__slider {
+        position: relative;
+        padding-left: 145px;
+
+        @media(max-width: 1700px) {
+            padding-left: 15px;
+        }
+
+        @media(max-width: 991px) {
+            padding-bottom: 50px;
+        }
+    }
+
+    // .promo__slider-inner
+
+    &__slider-inner {
+        @extend %flex-row;
+        align-items: flex-start;
+
+        @media(max-width: 991px) {
+            flex-direction: column;
+        }
+    }
+
+    &__slider-content {
+        width: 535px;
+        flex-shrink: 0;
+        padding-top: 40px;
+
+        @media(max-width: 1450px) {
+            width: 49%;
+        }
+
+        @media(max-width: 991px) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__slider-img {
+        @media(max-width: 1450px) {
+            width: 49%;
+        }
+
+        @media(max-width: 991px) {
+            width: 100%;
+        }
+    }
+
+    // .promo__title
+
+    &__title {
+        font-size: 54px;
+        font-weight: 700;
+        color: $blue;
+
+        @media(max-width: 991px) {
+            font-size: 45px;
+        }
+
+        @media(max-width: 575px) {
+            font-size: 29px;
+        }
+    }
+
+    // .promo__subtitle
+
+    &__subtitle {
+        @extend %text-18;
+        color: $gray;
+        margin: 40px 0;
+
+        @media(max-width: 575px) {
+            margin: 20px 0;
+        }
+    }
+
+    // .promo__price
+
+    &__price {
+        font-weight: 600;
+        color: $gray;
+        margin-bottom: 47px;
+
+        @media(max-width: 575px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    // .promo__new-price
+
+    &__new-price {
+        font-size: 24px;
+        font-weight: 700;
+        color: $red;
+
+        @media(max-width: 575px) {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+    }
+
+    // .promo__old-price
+
+    &__old-price {
+        text-decoration: line-through;
+    }
+
+    // .promo__buttons
+
+    &__buttons {
+        display: flex;
+    }
+
+    // .promo__link
+
+    &__link {
+        min-width: 160px;
+        padding: 21px 30px;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+
+        @media(max-width: 575px) {
+            padding: 15px 30px;
+        }
+    }
+
+    // .promo__arrows
+
+    &__arrows {
+        margin-left: 120px;
+    }
+
+    &__slider-btn {
+        position: absolute;
+        bottom: 135px;
+
+        @media(max-width: 991px) {
+            display: none;
+        }
+
+        &--prev {
+            left: 30px + 160px + 111px + 119px;
+        }
+
+        &--next {
+            left: 30px + 160px + 111px + 119px + 60px + 20px;
+        }
+    }
+}

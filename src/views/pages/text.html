@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {"title": "Текстовая"})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="home.html">
+                            <img src="img/icons/home.png" alt="Домашняя страница">
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="promotion.html">
+                            Статьи
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Программа реабилитации пациентов после после ОРВИ, пневмонии и covid - 19</span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <main class="page text-page">
+            <div class="container">
+                <h1 class="title line-title page-title">
+                    Программа реабилитации пациентов после ОРВИ, пневмонии и covid-19 (Н1)
+                </h1>
+                <a href="#" class="tag text-page__tag">Новости клиники</a>
+                <div class="page__wrapper">
+                    <div class="page__content">
+                        <img src="img/content/text.jpg" alt="Мужчина в защитной маске">
+                        @@include('../../blocks/modules/text-page/_text-page.html')
+                        <section class="text-page__section">
+                            <h4 class="title text-page__section-title">
+                                Комплексная реабилитация позволит (Н4):
+                            </h4>
+                            <ul class="mark-list">
+                                <li class="mark-list__item">Уменьшить очаги воспаления в кратчайшие сроки;</li>
+                                <li class="mark-list__item">Улучшить вентиляцию легких;</li>
+                                <li class="mark-list__item">Нормализовать поступления кислорода в организм;</li>
+                                <li class="mark-list__item">Устранить обструкцию бронхов;</li>
+                                <li class="mark-list__item">
+                                    Предотвратить формирование фиброзной ткани, как основной причины развития
+                                    дыхательной недостаточности после пневмонии.
+                                </li>
+                                <li class="mark-list__item">Страх и депрессия.</li>
+                            </ul>
+                        </section>
+
+                        <div class="attention-box text-page__section">
+                            <p>
+                                Реабилитация необходима абсолютно всем пациентам, перенесшим ОРВИ, пневмонию и
+                                коронавирусную инфекцию, для
+                                восстановления и сохранения качества жизни!!!
+                            </p>
+                        </div>
+                        @@include('../../blocks/modules/share/_share.html')
+                    </div>
+                    <div class="page__sidebar">
+                        <nav class="page__sidebar page-nav">
+                            <h5 class="page-nav__title">Навигация по странице</h5>
+                            <ol class="page-nav__list">
+                                <li class="page-nav__item">
+                                    <a href="#need-reabilitation" class="page-nav__link">
+                                        Реабилитация крайне
+                                        необходима, если у Вас
+                                    </a>
+                                </li>
+                                <li class="page-nav__item">
+                                    <a href="#program" class="page-nav__link page-nav__link--active">
+                                        Что входит в программу
+                                    </a>
+                                </li>
+                                <li class="page-nav__item">
+                                    <a href="#complex-reabilitation" class="page-nav__link">
+                                        Комплексная реабилитация
+                                        позволит
+                                    </a>
+                                </li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

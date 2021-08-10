@@ -1,0 +1,71 @@
+.jq-selectbox {
+    display: block;
+    &__select {
+        @extend %vertical-align;
+        height: 70px;
+        padding-left: 30px;
+        padding: 7px 10px;
+        border-radius: 15px;
+        border: 2px solid #edf4fa;
+        background: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        @extend %gray-text;
+        box-shadow: none;
+        text-shadow: none;
+        &:hover {
+            background: transparent;
+        }
+        &:active {
+            background: transparent;
+            box-shadow: none;
+        }
+    }
+    &__select-text {
+        overflow: visible;
+    }
+    &__trigger {
+        position: absolute;
+        @extend %pos-center-y;
+        right: 10px;
+        @include icon(60px);
+        background-color: $light-blue;
+        background-image: url('../img/icons/select-drop.png');
+        background-size: 20px 16px;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+    }
+    &__trigger-arrow {
+        display: none;
+    }
+    li {
+        padding: 10px;
+        transition: 0.3s all;
+        &:hover {
+            background: $blue;
+            color: #fff;
+        }
+    }
+    li + li {
+        margin-top: 7px;
+    }
+    li.selected {
+        background: $blue;
+        color: #fff;
+    }
+    &__dropdown {
+        box-shadow: 0px 4px 6px rgba(156, 156, 156, 0.25);
+        border: none;
+        border-radius: 0;
+        padding-top: 7px;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+        color: $gray;
+    }
+}
+.jq-select.focused {
+    border: none !important;
+    outline: none;
+}

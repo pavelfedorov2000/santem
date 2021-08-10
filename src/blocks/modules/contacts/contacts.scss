@@ -1,0 +1,126 @@
+.contacts-page {
+    // .contacts__wrapper
+
+    &__wrapper {
+        margin-top: 40px;
+    }
+
+    &__content {
+        width: 800px / $container * 100%;
+    }
+
+    // .contacts__items
+
+    &__items {
+        grid-gap: 40px 60px;
+        margin-bottom: 40px;
+    }
+
+    // .contacts__map
+
+    &__map {
+        width: 820px / $container * 100%;
+    }
+}
+
+.contacts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 40px;
+}
+
+.contacts-section {
+    &__items {
+        grid-gap: 20px 272px;
+
+        @media(max-width: 991px) {
+            grid-column-gap: 30px;
+        }
+
+        @media(max-width: 650px) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__requisites {
+        @extend %gray-text;
+    }
+}
+
+.contact-item {
+    display: flex;
+    // .contact-item__img
+
+    &__img {
+        @include bg-icon(60px, linear-gradient(-45deg, #feffff 0%, #d5dce1 100%), $light-shadow);
+        @extend %flex-center;
+    }
+
+    // .contact-item__content
+
+    &__content {
+        padding-top: 10px;
+        margin-left: 20px;
+    }
+
+    // .contact-item__title
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 14px;
+    }
+
+    // .contact-item__link
+
+    &__action-link {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        color: $red;
+    }
+
+    &__action-link+&__action-link {
+        margin-top: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        //line-height: 22px;
+        font-weight: 500;
+        color: $gray;
+    }
+
+    p+p {
+        margin-top: 15px;
+    }
+}
+
+.get {
+    // .get__item
+
+    &__item+&__item {
+        margin-top: 40px;
+    }
+
+    // .get__item-title
+
+    &__item-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 20px;
+
+        span {
+            color: $blue;
+        }
+    }
+
+    // .get__item-descr
+
+    &__item-descr {
+        @extend %gray-text;
+        margin-left: 0;
+    }
+}

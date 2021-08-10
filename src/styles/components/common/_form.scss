@@ -1,0 +1,90 @@
+.input {
+    border-radius: $radius;
+    border: 2px solid $light-blue;
+    background-color: #fff;
+    @extend %gray-text;
+
+    &:focus {
+        border-color: $blue;
+    }
+}
+
+.form-agreement {
+    font-size: 14px;
+    line-height: 22px;
+    color: $gray;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.form {
+    @extend %blue-radius-bg;
+
+    &__input {
+        display: inline-flex;
+        align-items: center;
+        background-color: #fff;
+        padding: 3px 20px 3px 5px;
+        border-radius: $radius;
+        border: 2px solid $light-blue;
+        @extend %gray-text;
+
+        &:focus {
+            border-color: $blue;
+        }
+
+        input {
+            width: calc(100% - 5px - 50px - 15px);
+        }
+    }
+
+    &__input-img {
+        @include bg-icon(50px, $green, $light-shadow);
+        @extend %flex-center;
+        margin-right: 15px;
+    }
+
+    &__agreement {
+        font-size: 14px;
+        line-height: 22 / 14 * 100%;
+        color: $gray;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__btn {
+        padding: 21px;
+
+        @media(max-width: 575px) {
+            padding: 15px;
+        }
+    }
+}
+
+.search-form {
+    &__input {
+        width: 100%;
+        border-radius: $radius;
+        border: 2px solid $light-blue;
+        background-color: #fff;
+        font-size: 16px;
+        color: $gray;
+        padding: 24px 30px;
+        background-image: url(../img/icons/search.png);
+        background-position: calc(100% - 20px) center;
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+
+        &::placeholder {
+            color: $gray;
+        }
+
+        &:focus {
+            border-color: $blue;
+        }
+    }
+}

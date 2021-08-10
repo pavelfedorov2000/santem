@@ -1,0 +1,42 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    @extend %blue-bg;
+    &__item {
+        @include bg-icon(60px, linear-gradient(-45deg, #feffff 0%, #d5dce1 100%), $light-shadow);
+        @extend %flex-center;
+        margin: 0 10px;
+        font-size: 18px;
+        font-weight: 700;
+        color: $blue;
+        transition: 0.3s all;
+        &--active {
+            color: $gray;
+            background: $blue;
+            color: #ffffff;
+        }
+        &:hover {
+            background: $blue;
+            color: #ffffff;
+        }
+    }
+    &__arrow {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-xy;
+            width: 16px;
+            height: 20px;
+            background-image: url(../img/icons/arrows/arrow-right.png);
+        }
+        &--back {
+            transform: rotate(180deg);
+        }
+        &:hover:before {
+            background-image: url(../img/icons/arrows/arrow-more.png);
+        }
+    }
+}

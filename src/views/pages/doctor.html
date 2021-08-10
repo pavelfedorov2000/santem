@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {"title": "Врач"})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="home.html">
+                            <img src="img/icons/home.png" alt="Домашняя страница">
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="doctors.html">Врачи</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Фамилия Имя Отчество</span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <main class="page doctor-page">
+            <div class="container">
+                <h1 class="title line-title page-title page__title">
+                    Фамилия Имя Отчество
+                </h1>
+                <div class="page__wrapper doctor-page__wrapper">
+                    <div class="page__content doctor-page__content">
+                        <div class="doctor-profile doctor-page__card">
+                            <img class="doctor-profile__img" src="img/content/doctor.jpg" alt="Фото врача">
+                            <div class="doctor-profile__content">
+                                <div class="doctor-profile__categories">
+                                    <a href="#" class="tag doctor-profile__category">
+                                        Врач-хирург
+                                    </a>
+                                    <a href="#" class="tag doctor-profile__category">
+                                        УЗИ-специалист
+                                    </a>
+                                </div>
+                                <dl class="doctor-profile__list">
+                                    <dt>Врач высшей категории</dt>
+                                    <dd></dd>
+                                    <div>
+                                        <dt>Стаж:</dt>
+                                        <dd>15 лет</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Прием от:</dt>
+                                        <dd>1800 руб.</dd>
+                                    </div>
+                                </dl>
+                                <p>
+                                    Специализируюсь на лечении варикоза, сосудистых звездочек, флебита, тромбоза вен,
+                                    тромбофлебита, хронической венозной
+                                    недостаточности. Проводит флебэктомию, склеротерапию и тд.
+                                </p>
+                                <a href="#" class="btn doctor-profile__btn btn--red">
+                                    Записаться
+                                </a>
+                                <a href="#reviews" class="doctor-profile__reviews-link">
+                                    Отзывов о враче: 212
+                                </a>
+                            </div>
+                        </div>
+                        <section id="achievements" class="page__section">
+                            <h3 class="title page-title doctor-page__section-title">Достижения</h3>
+                            <ul class="mark-list doctor-page__list">
+                                <li class="mark-list__item">
+                                    Научная степень - Кандидат медицинских наук
+                                </li>
+                                <li class="mark-list__item">
+                                    4 патента на методики лечения в ЛОР-практике
+                                </li>
+                                <li class="mark-list__item">
+                                    Кандидатская диссертация на тему “Клинико-иммунологическая характеристика и лечение
+                                    больных хроническим полипозным
+                                    гаймороэтмоидитом”
+                                </li>
+                            </ul>
+                        </section>
+                        <section id="education" class="page__section">
+                            <h3 class="title page-title doctor-page__section-title">Образование:</h3>
+                            <ul class="mark-list doctor-page__list">
+                                <li class="mark-list__item">
+                                    Диплом по специальности "Педиатрический", Российский национальный исследовательский
+                                    медицинский университет имени Н.И.
+                                    Пирогова (2017 г.)
+                                </li>
+                                <li class="mark-list__item">
+                                    Ординатура по специальности "Сосудистый хирург", Национальный медико-хирургический
+                                    центр
+                                    имени Н.И.Пирогова (2019 г.)
+                                </li>
+                            </ul>
+                        </section>
+                        <section id="services" class="page__section">
+                            <h3 class="title page-title doctor-page__section-title">Выполняемые процедуры и операции:
+                            </h3>
+                            <ul class="mark-list doctor-page__list">
+                                <li class="mark-list__item">Консультации врача-пульмонолога (наблюдение в течение всего
+                                    периода реабилитации);
+                                </li>
+                                <li class="mark-list__item">Лабораторная диагностика, для назначения правильного
+                                    лечения;</li>
+                                <li class="mark-list__item">Аппаратная диагностика (ФВД и Пульсоксиметрия);</li>
+                                <li class="mark-list__item">Если понадобится консультации врача другой специальности;
+                                </li>
+                                <li class="mark-list__item">Дыхательная гимнастика;</li>
+                                <li class="mark-list__item">Лечебный массаж грудной клетки;</li>
+                                <li class="mark-list__item">Медикаментозное лечение;5.jpg</li>
+                                <li class="mark-list__item">Ингаляции;</li>
+                                <li class="mark-list__item">Рефлексотерапия.</li>
+                            </ul>
+                        </section>
+                        <section id="reviews" class="page__section">
+                            <h3 class="title page-title doctor-page__section-title">Отзывы о враче:</h3>
+                            <article class="review-item">
+                                <div class="review-item__info">
+                                    <div class="review-item__img-wrap">
+                                        <img class="review-item__img" src="img/icons/blue-user.png"
+                                            alt="Клиент без аватара">
+                                    </div>
+                                    <div class="review-item__info-text">
+                                        <h6 class="review-name reviews__item-name">Иванова К.</h6>
+                                        <time class="review-date reviews__item-date"
+                                            datetime="2020-03-12">12.03.2020</time>
+                                    </div>
+                                </div>
+                                <div class="reviews__item-content">
+                                    <div class="review-item__topic">
+                                        <div class="review-item__topic-title">Тема:</div>
+                                        <div class="review-item__topic-items">
+                                            <a href="#" class="tag review-item__topic-item">
+                                                Фомин Андрей Викторович
+                                            </a>
+                                            <a href="#" class="tag review-item__topic-item">
+                                                Педиатрия
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p class="review-item__text">
+                                        Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                                        несколько абзацев более менее осмысленного
+                                        текста рыбы на русском языке, а начинающему оратору отточить навык публичных
+                                        выступлений в домашних условиях. При
+                                        создании... небезизвестный универсальный код речей. Текст генерируется
+                                        абзацами случайным образом от двух до десяти
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
+                        <article class="review-item">
+                            <div class="review-item__info">
+                                <img class="review-item__img" src="img/client.png" alt="Аватар клиента">
+                                <div class="review-item__info-text">
+                                    <h6 class="review-name reviews__item-name">Александр</h6>
+                                    <time class="review-date reviews__item-date" datetime="2020-03-12">12.03.2020</time>
+                                </div>
+                            </div>
+                            <div class="reviews__item-content">
+                                <div class="review-item__topic">
+                                    <div class="review-item__topic-title">Тема:</div>
+                                    <a href="#" class="tag review-item__topic-item">
+                                        Смирнов Александр Борисович
+                                    </a>
+                                </div>
+                                <p class="review-item__text">
+                                    Медицинский центр спроектирован по принципу «Умного дома», посещать который
+                                    безопасно и комфортно. Подрядчиком стала
+                                    немецкая компания, которая построила ряд клиник в Германии, Израиле и Швейцарии.
+                                </p>
+                            </div>
+                        </article>
+                        <a href="reviews.html" class="btn doctor-page__section-btn btn--blue">Читать все отзывы</a>
+                    </div>
+                    <nav class="page__sidebar page-nav">
+                        <h5 class="page-nav__title">Навигация по странице</h5>
+                        <ol class="page-nav__list">
+                            <li class="page-nav__item">
+                                <a href="#achievements" class="page-nav__link">Достижения</a>
+                            </li>
+                            <li class="page-nav__item">
+                                <a href="#education" class="page-nav__link page-nav__link--active">Образование</a>
+                            </li>
+                            <li class="page-nav__item">
+                                <a href="#certificates" class="page-nav__link">Сертификаты</a>
+                            </li>
+                            <li class="page-nav__item">
+                                <a href="#services" class="page-nav__link">Услуги</a>
+                            </li>
+                            <li class="page-nav__item">
+                                <a href="#reviews" class="page-nav__link">
+                                    Отзывы о враче <span>(212)</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+// flex
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+// buttons, links
+@mixin reset-btn {
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+// positioning
+@mixin centerX {
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin centerY {
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin centerXY {
+    @include centerX;
+    @include centerY;
+}
+
+@mixin shadow($color) {
+    box-shadow: -5px -4px 12px #ffffff, 5px 4px 12px $color;
+}
+
+@mixin btn($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: $radius;
+}
+
+@mixin blue-bg($width) {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    box-shadow: inset -8px -6px 14px 2px #f9ffff, inset 8px 6px 18px 2px $light-shadow;
+    background-color: $light-blue;
+    width: $width;
+}
+
+@mixin icon($size) {
+    width: $size;
+    height: $size;
+    border-radius: $radius;
+}
+
+@mixin bg-icon($size, $bgc, $shadow-color) {
+    width: $size;
+    height: $size;
+    border-radius: $radius;
+    background: $bgc;
+    box-shadow: -5px -4px 12px #ffffff, 5px 4px 12px $shadow-color;
+    transition: 0.3s box-shadow;
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+@mixin arrow-more {
+    background-image: url(../img/icons/arrows/arrow-more.png);
+    background-position: center;
+    background-size: 16px 20px;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,32 @@
+.breadcrumbs {
+    @extend %blue-bg;
+    padding: 16.5px 0;
+    &__list {
+        @extend %vertical-align;
+    }
+    &__item {
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+        color: $blue;
+        padding: 0 15px;
+        &:after {
+            content: '';
+            position: absolute;
+            @include centerY;
+            right: 0;
+            width: 4px;
+            height: 8px;
+            background-image: url(../img/icons/arrows/crumb-arrow.png);
+        }
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            color: $gray;
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

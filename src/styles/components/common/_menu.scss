@@ -1,0 +1,20 @@
+.menu {
+    // .menu__list
+
+    &__list {
+    }
+
+    // .menu__item
+
+    &__item {
+        display: inline-block;
+    }
+
+    // .menu__link
+
+    &__link {
+        font-size: 18px;
+        font-weight: 700;
+        color: $blue;
+    }
+}

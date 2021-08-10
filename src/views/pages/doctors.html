@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {"title": "Врачи"})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/breadcrumbs/_breadcrumbs.html', {
+        "current_page": "Врачи"
+        })
+
+        <main class="page doctors-page">
+            <div class="container">
+                <div class="page__top">
+                    <h1 class="title line-title page-title">Врачи</h1>
+                    <p>
+                        Главными показателями качества обслуживания являются соблюдение этического кодекса врача России,
+                        приказов Минздрава РФ и
+                        международных протоколов, использование оборудования экспертного класса, конфиденциальность,
+                        создание комфортных условий
+                        для всей семьи.
+                    </p>
+                    <form class="filter-form grid" action="#">
+                        <select class="filter-style" name="direction" id="direction">
+                            <option value="direction_1">Направление</option>
+                            <option value="direction_2">Направление</option>
+                            <option value="direction_3">Направление</option>
+                        </select>
+                        <select class="filter-style" name="category" id="category">
+                            <option value="category_1">Категория</option>
+                            <option value="category_2">Категория</option>
+                            <option value="category_3">Категория</option>
+                        </select>
+                        <button class="btn filter-form__btn btn--blue" type="submit">Найти</button>
+                    </form>
+                </div>
+
+                <div class="doctors-page__cards grid">
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                    @@include('../../blocks/modules/doctor-card/_doctor-card.html')
+                </div>
+            </div>
+
+            @@include('../../blocks/modules/pagination/_pagination.html')
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

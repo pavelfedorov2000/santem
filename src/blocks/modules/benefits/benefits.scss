@@ -1,0 +1,41 @@
+.benefits {
+    // .benefits__items
+
+    &__items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 35px 30px;
+    }
+
+    // .benefits__item
+
+    &__item {
+        position: relative;
+        padding-left: 120px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            @include bg-icon(100px, $light-blue, $light-shadow);
+            background-image: url(../img/icons/mission/caduceus.png);
+            background-size: 50px 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    // .benefits__item-title
+
+    &__item-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 20px;
+    }
+
+    // .benefits__item-text
+
+    &__item-text {
+        @extend %gray-text;
+    }
+}

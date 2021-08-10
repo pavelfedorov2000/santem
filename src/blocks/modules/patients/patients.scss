@@ -1,0 +1,251 @@
+.patients-page {
+    padding: 40px 0;
+
+    @media(max-width: 575px) {
+        padding: 30px 0;
+    }
+
+    &__content {
+        padding-bottom: 120px;
+
+        @media(max-width: 1200px) {
+            padding-bottom: 50px;
+        }
+
+        @media(max-width: 575px) {
+            padding-bottom: 0;
+        }
+    }
+
+    &__top-text {
+        @extend %text-16;
+        color: $dark;
+        margin: 40px 0 35px;
+    }
+
+    &__links {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+
+        @media(max-width: 767px) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__link {
+        @extend %vertical-align;
+        padding: 10px;
+        @include shadow($light-shadow);
+        border-radius: $radius;
+        background: linear-gradient(to right, $light-blue 0%, #ffffff 100%);
+        transition: .3s box-shadow;
+
+        &:hover {
+            box-shadow: none;
+
+            .patients-page {
+                &__link-title {
+                    color: $red;
+                }
+            }
+        }
+    }
+
+    &__link-img {
+        @include bg-icon(60px, $light-blue, $light-shadow);
+        @extend %flex-center;
+        flex-shrink: 0;
+    }
+
+    &__link-title {
+        font-size: 24px;
+        text-align: center;
+        margin: 0 auto;
+        transition: .3s color;
+
+        @media(max-width: 575px) {
+            font-size: 20px;
+        }
+    }
+
+    &__info-links {
+        @extend %flex-row;
+
+        @media(max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+
+    // .patients-page__link
+
+    &__info-link {
+        position: relative;
+        display: inline-block;
+        width: 380px;
+        padding-left: 81px;
+        @extend %text-18;
+        font-weight: 700;
+        color: $blue;
+
+        &:before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            left: 0px;
+            @include bg-icon(60px, $green, $light-shadow);
+            background-image: url(../img/icons/arrows/arrow-more.png);
+            background-size: 16px 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__info-link+&__info-link {
+        @media(max-width: 900px) {
+            margin-top: 50px;
+        }
+    }
+
+    // .patients-page__banner
+
+    &__banner {
+        @extend %vertical-align;
+        padding-right: 40px;
+        justify-content: flex-end;
+        height: 300px;
+        background: url(../img/content/patients-page.jpg) center (center / cover) no-repeat;
+
+        @media(max-width: 767px) {
+            height: auto;
+            padding-right: 0;
+            background: none;
+        }
+    }
+
+    // .patients-page__banner-box
+
+    &__banner-box {
+        width: 520px;
+        @extend %blue-radius-bg;
+        padding: 40px 39px 62px;
+
+        @media(max-width: 767px) {
+            width: 100%;
+            padding: 30px;
+        }
+    }
+
+    &__banner-title {
+        @media(max-width: 575px) {
+            padding-left: 0;
+        }
+
+        &:before {
+            @media(max-width: 575px) {
+                display: none;
+            }
+        }
+    }
+
+    // .patients-page__banner-link
+
+    &__banner-link {
+        display: inline-block;
+        margin-left: 107px;
+        margin-top: 42px;
+        position: relative;
+        padding-right: 80px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+        color: $blue;
+        text-transform: uppercase;
+
+        @media(max-width: 575px) {
+            margin-left: 0;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            right: 0;
+            @include bg-icon(60px, $blue, rgba(33, 99, 171, 0.6));
+            background-image: url(../img/icons/arrows/arrow-more.png);
+            background-size: 16px 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.reception-schedule {
+    // .reception-schedule__cols
+
+    &__cols {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 150px;
+
+        @media(max-width: 1450px) {
+            grid-gap: 50px;
+        }
+
+        @media(max-width: 767px) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    // .reception-schedule__col
+
+    &__col {}
+
+    // .reception-schedule__title
+
+    &__title {
+        @extend %text-18;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 45px;
+    }
+
+    // .reception-schedule__item
+
+    &__item {
+        position: relative;
+        padding-left: 80px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            @include bg-icon(60px, $light-blue, $light-shadow);
+            background-image: url(../img/icons/doctor.png);
+            background-size: 26px 32px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__item+&__item {
+        margin-top: 30px;
+    }
+
+    &__item-title {
+        font-size: 18px;
+        line-height: 22 / 18 * 100%;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 15px;
+    }
+
+    // .reception-schedule__info
+
+    &__item-info {
+        @extend %gray-text;
+
+        >* {
+            display: block;
+        }
+    }
+}

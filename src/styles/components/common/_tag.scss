@@ -1,0 +1,15 @@
+.tag {
+    display: inline-block;
+    background-color: transparent;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: $radius;
+    color: $blue;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 18px;
+}
+
+.tag + .tag {
+    margin-left: 10px;
+}

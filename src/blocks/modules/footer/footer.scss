@@ -1,0 +1,313 @@
+.footer {
+    // .footer__menu
+
+    &__menu {
+        padding: 22px 0;
+        border-top: 2px solid $light-blue;
+    }
+
+    // .footer__menu-list
+
+    &__menu-list {
+        @extend %flex-row;
+        @media (max-width: 991px) {
+            justify-content: flex-start;
+            width: 100%;
+            overflow-x: scroll;
+        }
+    }
+
+    &__menu-item {
+        @media (max-width: 991px) {
+            margin-right: 30px;
+            white-space: nowrap;
+        }
+    }
+
+    // .footer__main
+
+    &__main {
+        box-shadow: inset -8px -6px 14px 2px #f9ffff, inset 8px 6px 18px 2px $light-shadow;
+        background-color: $light-blue;
+        padding: 40px 0;
+        @media (max-width: 575px) {
+            padding: 30px 0;
+        }
+    }
+
+    // .footer__main-top
+
+    &__top,
+    &__bottom {
+        @extend %flex-row;
+    }
+
+    &__bottom {
+        @media (max-width: 850px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: 575px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__top {
+        margin-bottom: 40px;
+        @media (max-width: 1450px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 991px) {
+            justify-content: flex-start;
+        }
+        @media (max-width: 850px) {
+            justify-content: center;
+        }
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        height: 60px;
+        @media (max-width: 1450px) {
+            margin-right: auto;
+        }
+        @media (max-width: 900px) {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 850px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    // .footer__buttons
+
+    &__buttons {
+        //margin-bottom: 40px;
+        @media (max-width: 1450px) {
+            width: 100%;
+            display: flex;
+            margin-top: 30px;
+        }
+        @media (max-width: 991px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 850px) {
+            justify-content: center;
+        }
+    }
+
+    // .footer__btn
+
+    &__btn {
+        width: 240px;
+        padding: 21px;
+        font-size: 15px;
+        @media (max-width: 575px) {
+            width: 49%;
+            padding: 15px;
+        }
+        @media (max-width: 480px) {
+            width: 100%;
+        }
+    }
+
+    &__btn + &__btn {
+        margin-left: 20px;
+        @media (max-width: 1450px) {
+            margin-right: auto;
+        }
+        @media (max-width: 850px) {
+            margin-right: 0;
+        }
+        @media (max-width: 575px) {
+            margin-left: auto;
+        }
+        @media (max-width: 480px) {
+            margin-top: 15px;
+        }
+    }
+
+    // .footer__copy
+
+    &__copy {
+        font-size: 14px;
+        color: $gray;
+        @media (max-width: 850px) {
+            text-align: center;
+            width: 100%;
+            order: 3;
+            margin-top: 20px;
+        }
+    }
+
+    // .footer__copy-link
+
+    &__copy-link {
+        position: relative;
+        color: #2163ab;
+        padding-left: 27px;
+        &:before {
+            content: '';
+            position: absolute;
+            @include centerY;
+            left: 0;
+            width: 21px;
+            height: 20px;
+            background-image: url('../img/icons/medical-marketing.png');
+        }
+    }
+
+    // .footer__copyright
+
+    &__copyright {
+        display: block;
+        margin-top: 15px;
+    }
+
+    &__links {
+        //margin-top: 30px;
+    }
+
+    &__link + &__link {
+        margin-top: 15px;
+        @media (max-width: 575px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-size: 14px;
+        color: $gray;
+        text-decoration: underline;
+    }
+
+    // .footer__payment
+
+    &__payment {
+        font-size: 14px;
+        color: $gray;
+        @media (max-width: 850px) {
+            order: -1;
+            margin-right: 20px;
+        }
+        @media (max-width: 575px) {
+            margin-bottom: 20px;
+        }
+        //margin-top: 50px;
+    }
+
+    // .footer__payment-list
+
+    &__payment-list {
+        @extend %vertical-align;
+        margin-top: 10px;
+    }
+
+    // .footer__payment-item
+
+    &__payment-item {
+        display: inline-block;
+    }
+
+    &__payment-item + &__payment-item {
+        margin-left: 15px;
+    }
+
+    // .footer__bottom
+
+    &__warning {
+        padding: 20px 0;
+        font-weight: 700;
+        font-size: 24px;
+        color: #e1ebf4;
+        text-align: center;
+        @media (max-width: 991px) {
+            font-size: 20px;
+        }
+        @media (max-width: 575px) {
+            font-size: 14px;
+        }
+    }
+
+    &__social {
+        @media (max-width: 991px) {
+            width: 100%;
+            margin-top: 30px;
+        }
+        @media (max-width: 850px) {
+            display: flex;
+            justify-content: center;
+        }
+        @media (max-width: 480px) {
+            width: 60px * 3 + 15px * 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+    }
+
+    &__social-item + &__social-item {
+        @media (max-width: 1200px) {
+            margin-left: 15px;
+        }
+        @media (max-width: 480px) {
+            margin-left: 0;
+        }
+    }
+}
+
+.contact-footer {
+    &__item {
+    }
+
+    &__item + &__item {
+        @media (max-width: 1450px) {
+            margin-left: 15px;
+        }
+        @media (max-width: 700px) {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+
+    &__item-img {
+        @include bg-icon(60px, $light-blue, $light-shadow);
+        @media (max-width: 575px) {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__item-title {
+        @media (max-width: 575px) {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    }
+
+    // .info-footer__item-content
+
+    &__item-content {
+        padding-top: 11px;
+        margin-left: 20px;
+        @media (max-width: 575px) {
+            padding-top: 0;
+            margin-left: 15px;
+        }
+    }
+
+    // .info-footer__item-address
+
+    &__item-address + &__item-address {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,85 @@
+.slick {
+    &-dots {
+        position: absolute;
+        @extend %pos-center-y;
+        left: 0;
+
+        @media(max-width: 1700px) {
+            display: none;
+        }
+
+        @media(max-width: 991px) {
+            left: 50%;
+            transform: translateX(-50%);
+            top: auto;
+            bottom: 0;
+        }
+
+        li {
+            display: block;
+            margin: 5px 0;
+
+            @media(max-width: 991px) {
+                display: inline-block;
+                margin: 0 5px;
+            }
+        }
+
+        button {
+            width: 30px;
+            height: 2px;
+            background-color: #ccdae6;
+            padding: 0;
+            font-size: 0;
+
+            @media(max-width: 991px) {
+                height: 5px;
+            }
+        }
+
+        .slick-active button {
+            position: relative;
+            width: 120px;
+
+            @media(max-width: 991px) {
+                width: 30px;
+                background-color: $blue;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 80px;
+                height: 100%;
+                background-color: $blue;
+
+                @media(max-width: 991px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.slider-buttons {
+    display: flex;
+}
+
+.slider {
+    &__btn {
+        @include bg-icon(60px, linear-gradient(-45deg, #feffff 0%, #d5dce1 100%), #c9cfd5);
+        @extend %flex-center;
+        z-index: 100;
+        transition: 0.3s box-shadow;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &__btn+&__btn {
+        margin-left: 20px;
+    }
+}

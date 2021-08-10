@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {"title": "Контакты"})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        <div class="breadcrumbs"></div>
+
+        <main class="page not-found-page">
+            <div class="_container not-found-page__wrapper">
+                <div class="not-found-page__content">
+                    <img class="not-found-page__img" src="img/404.png" alt="Ошибка 404">
+                    <h1 class="title line-title page-title not-found-page__title">Страница не найдена</h1>
+                    <p>
+                        Похоже, нужная вам страница потерялась. Мы обязательно разберемся с этим недоразумением!
+                        А пока вернитесь на главную или перейдите к услугам
+                    </p>
+                    <a href="home.html" class="not-found-page__link">На главную</a>
+                    <a href="services.html" class="not-found-page__link">Услуги</a>
+                </div>
+                <div class="form order-form not-found-page__form">
+                    <h2 class="title order-form__title">Оставить отзыв</h2>
+                    <div class="order-form__subtitle">
+                        Оставьте заявку или перезвоните
+                        нам по телефону:
+                        <a class="order-form__phone" href="tel:+73912803303">+7 (391) 280-33-03</a>
+                    </div>
+                    <form class="order-form__body" action="#">
+                        <div class="form__input order-form__input">
+                            <div class="form__input-img">
+                                <img src="img/icons/input-user.png" alt="юзер">
+                            </div>
+                            <input name="name" placeholder="Представьтесь" required>
+                        </div>
+                        <div class="form__input order-form__input">
+                            <div class="form__input-img">
+                                <img src="img/icons/input-phone.png" alt="Телефон">
+                            </div>
+                            <input name="phone" type="tel" placeholder="Ваш телефон" required>
+                        </div>
+                        <button class="btn form__btn order-form__btn btn--red" type="submit">
+                            Отправить
+                        </button>
+                        <small class="form__agreement">
+                            Нажимая на кнопку, вы даете согласие на обработку
+                            <a href="#">перональных данных</a>
+                        </small>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

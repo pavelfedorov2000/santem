@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {"title": "Цены"})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/breadcrumbs/_breadcrumbs.html', {
+        "current_page": "Цены"
+        })
+
+        <main class="page prices-page">
+            <div class="container">
+                <div class="page__content page__top">
+                    <h1 class="title line-title page-title">Цены</h1>
+                    <p>
+                        Закажите необходимую услугу, или выберите несколько услуг и калькулятор автоматически произвидет
+                        суммарный расчет их
+                        стоимости. Для уточнения вашего результата вы можете оставить заявку.
+                    </p>
+                </div>
+                <div class="page__wrapper prices-page__wrapper">
+                    <div class="page__content">
+                        <div class="prices-page__tabs">
+                            <a href="#" class="tab prices-page__tab tab--active">
+                                <span class="prices-page__tab-img">
+                                    <img src="img/icons/first-aid-kit.png" alt="Услуги">
+                                </span>
+                                Услуги
+                            </a>
+                            <a href="#" class="tab prices-page__tab">
+                                <span class="prices-page__tab-img">
+                                    <img src="img/icons/test.png" alt="Анализы">
+                                </span>
+                                Анализы
+                            </a>
+                            <a href="#" class="tab prices-page__tab">
+                                <span class="prices-page__tab-img">
+                                    <img src="img/icons/ecg.png" alt="Диагностика">
+                                </span>
+                                Диагностика
+                            </a>
+                        </div>
+
+                        <form class="search-form prices-page__search" action="#">
+                            <input type="text" class="search-form__input" placeholder="Поиск по услугам">
+                        </form>
+
+                        <div class="prices-accordion">
+                            @@include('../../blocks/modules/prices/_prices-accordion.html', {
+                            "summary": "Семейная медицина"
+                            })
+                            @@include('../../blocks/modules/prices/_prices-accordion.html', {
+                            "summary": "Гинекология"
+                            })
+                            @@include('../../blocks/modules/prices/_prices-accordion.html', {
+                            "summary": "Офтальмология"
+                            })
+                            @@include('../../blocks/modules/prices/_prices-accordion.html', {
+                            "summary": "Неврология"
+                            })
+                            @@include('../../blocks/modules/prices/_prices-accordion.html', {
+                            "summary": "Хирургия"
+                            })
+                            @@include('../../blocks/modules/prices/_prices-accordion.html', {
+                            "summary": "Массаж"
+                            })
+                            @@include('../../blocks/modules/prices/_prices-accordion.html', {
+                            "summary": "Вызов специалиста на дом"
+                            })
+                        </div>
+                    </div>
+                    <div class="page__sidebar aside-order">
+                        <dl class="aside-order__items">
+                            <div class="aside-order__item">
+                                <dt>Выбрано</dt>
+                                <dd>2 услуги</dd>
+                            </div>
+                            <div class="aside-order__item">
+                                <dt>На сумму</dt>
+                                <dd>2 145 ₽</dd>
+                            </div>
+                        </dl>
+                        <a href="#" class="btn aside-order__btn btn--red">Записаться</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

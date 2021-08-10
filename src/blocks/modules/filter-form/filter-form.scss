@@ -1,0 +1,21 @@
+.filter-form {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    @media (max-width: 850px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 575px) {
+        grid-template-columns: 100%;
+    }
+    // .filter-form__btn
+
+    &__btn {
+        padding: 26px;
+        @media (max-width: 850px) {
+            grid-column: span 2;
+        }
+        @media (max-width: 575px) {
+            grid-column: span 1;
+        }
+    }
+}

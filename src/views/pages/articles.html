@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {"title": "Статьи"})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        @@include('../../blocks/modules/breadcrumbs/_breadcrumbs.html', {
+        "current_page": "Статьи"
+        })
+
+        <main class="page articles">
+            <div class="container">
+                <h1 class="title line-title page-title">Статьи</h1>
+                <div class="articles__wrapper">
+                    @@include('../../blocks/modules/articles/aside/_aside-articles.html')
+                    @@include('../../blocks/modules/articles/main/_articles.html')
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>
